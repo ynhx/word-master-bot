@@ -1,0 +1,6 @@
+builders\CommandManager.class
+essentials\EssentialsProvider.class
+commands\PlayGameCommand.class
+api\handlers\DataServer.class
+wordmaster\WordMaster.class
+builders\EventManager.class
