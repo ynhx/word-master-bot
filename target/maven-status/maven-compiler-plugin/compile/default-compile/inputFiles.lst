@@ -1,6 +1,7 @@
 C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\api\handlers\DataServer.java
 C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\builders\CommandManager.java
 C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\builders\EventManager.java
-C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\commands\PlayGameCommand.java
+C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\commands\PlayCommand.java
 C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\essentials\EssentialsProvider.java
+C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\handlers\ChallengeTimeoutHandler.java
 C:\Users\220388239\Documents\Personal Projects\word-master\src\main\java\wordmaster\WordMaster.java

@@ -1,6 +1,7 @@
 builders\CommandManager.class
 essentials\EssentialsProvider.class
-commands\PlayGameCommand.class
+commands\PlayCommand.class
+handlers\ChallengeTimeoutHandler.class
 api\handlers\DataServer.class
 wordmaster\WordMaster.class
 builders\EventManager.class

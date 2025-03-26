@@ -1,6 +1,9 @@
 package wordmaster;
 
 import builders.CommandManager;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import essentials.EssentialsProvider;
 import java.io.IOException;
 import java.net.URI;
@@ -16,22 +19,18 @@ public class WordMaster {
     public static void main(String[] args) throws InterruptedException, IOException {
 
         EssentialsProvider provider = new EssentialsProvider();
-        
+
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://wordsapiv1.p.rapidapi.com/words/?letterPattern=eng&limit=100&page=1"))
+                .uri(URI.create("https://wordsapiv1.p.rapidapi.com/words/lovely/synonyms"))
                 .header("x-rapidapi-key", "c1df16a261msh8b46a4befbfcb4bp1ea49djsnb0c464951dcd")
                 .header("x-rapidapi-host", "wordsapiv1.p.rapidapi.com")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
-        
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        
         System.out.println(response.body());
         
-        System.out.println("Hello World!");
-        
         String token = provider.getBotToken();
-        
+
         JDABuilder builder = JDABuilder.createDefault(token)
                 .enableIntents(GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT)
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
@@ -40,7 +39,7 @@ public class WordMaster {
 
         JDA jda = builder.build();
         jda.awaitReady();
-        
+
         CommandManager.registerCommands(jda);
     }
 }
